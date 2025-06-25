@@ -17,7 +17,7 @@ header{
     align-items: center;
     padding: 10px 15px; /* Espacio alrededor del contenido del header */
     height: 68px  ; /* Altura del header */
-    background: linear-gradient(to right,#fe2ad0, #9d38e5,#630a50); 
+    background: linear-gradient(to right,#f4eef3, #9d38e5,#34052a); 
     position: fixed; /* Fija el header en la parte superior */
     width: 100%; /* Ancho completo */
     z-index: 1000; /* Asegura que el header esté por encima */
@@ -169,7 +169,7 @@ p { /* Estilo del párrafo de cada contenedor*/
     color: #fff; /* Texto blanco si la imagen es oscura */
     display: flex; /* Para centrar el contenido vertical y horizontalmente */
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -202,6 +202,7 @@ p { /* Estilo del párrafo de cada contenedor*/
 
 }
 .content.equipo{ /* Estilo para la página de "Equipo" */
+    padding: 80px; 
     height: 100vh !important;
     background: url(img/equipo.png) no-repeat center; 
     background-size: cover;
@@ -209,13 +210,13 @@ p { /* Estilo del párrafo de cada contenedor*/
 }
 .team-container { /* Contenedor para el equipo */
     display: grid; /* Usamos grid para organizar los miembros del equipo */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
     gap: 30px; /* Espacio entre los miembros del equipo */
     margin-top: 30px; /* Espacio encima del contenedor */
 }
 
 .team-member {
-    background-color: #87caf4; /* Color de fondo de cada miembro del equipo */
+    background-color: #eca7f4c1; /* Color de fondo de cada miembro del equipo */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
@@ -232,54 +233,60 @@ p { /* Estilo del párrafo de cada contenedor*/
     height: 250px; /* Altura fija para hacerlas cuadradas */
     object-fit: cover; /* Recorta la imagen para que encaje */
     border-radius: 50%; /* Imágenes circulares */
-    border: 4px solid #222020d3; /* Borde alrededor de la imagen */
+    border: 4px solid #22202062; /* Borde alrededor de la imagen */
     margin: 0 auto; /* Centrar imagen */
 }
 
 .team-member h3 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: #0e0d0d; /* Color del nombre de Lic */
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
 .team-member p {
-    font-size: 0.95em; 
+    font-size: 1.5rem; 
     color: #272323; /* Color del texto de la descripción */
     margin-bottom: 0;
 }
 
 .content.testimonials{ /* Estilo para la página de "Testimonios" */
+    padding: 80px;
     height: 100vh !important;
     background: url(img/testimonio2.png) no-repeat center;
     background-size: cover;
     color: #fff; /* Texto blanco si la imagen es oscura */
+    justify-content: start;
 }
 .testimonial-container { /* Contenedor para los testimonios */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 30px;
     margin-top: 30px;
+    padding: 0 20px; /* Espacio alrededor del contenedor */
+    justify-items: center; /* Centra los testimonios dentro de su celda */
+    
+
 }
 
 .testimonial {
-    background-color: #000000; /* Color de fondo de cada testimonio */
+    background-color: #0000008b; /* Color de fondo de cada testimonio */
     padding: 30px;
-    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     text-align: center; /* Alinea el texto al centro */
     position: relative; 
+    border-radius: 30px;
 }
 
 .testimonial p {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margin-bottom: 20px;
     color: #f1f1f1; /* Color del texto del testimonio */
 }
 
 .testimonial h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #ffffff; /* Color del nombre del autor */
     margin-bottom: 15px;
 }
@@ -301,7 +308,7 @@ p { /* Estilo del párrafo de cada contenedor*/
     color: #ffffff; /* Texto blanco si la imagen es oscura */
     display: flex; /* Para centrar el contenido vertical y horizontalmente */
     flex-direction: column;
-    justify-content: center; 
+    justify-content: start; 
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -340,6 +347,7 @@ p { /* Estilo del párrafo de cada contenedor*/
     padding: 30px 20px;
     text-align: center;
     font-size: 0.9em;
+    align-items: center;
 }
 
 .footer p {
@@ -423,13 +431,16 @@ header {
     cursor: pointer;
     gap: 5px; /* Espacio entre las barras */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    margin-left: auto;
 }
 
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #f6f0f0; /* Color de las barras de la hamburguesa */
+    background-color: #ffffff; /* Color de las barras de la hamburguesa */
     transition: all 0.3s ease;
+    
+
 }
 
 /* Animación de la hamburguesa a una 'X' (cuando el menú está abierto) */
@@ -463,9 +474,16 @@ header {
         padding: 1rem;
     }
 
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+
     /* Mostrar el botón del menú hamburguesa */
     .menu-toggle {
         display: flex; /* Ahora sí se muestra en móvil */
+
+
     }
 
     /* Oculta el navbar por defecto en móviles */
@@ -552,7 +570,8 @@ header {
 /* Teléfonos muy pequeños (Menos de 480px) */
 @media (max-width: 480px) {
     .logo img {
-        height: 50px;
+        height: 70px;
+        width: auto;
     }
 
     .content.header h2 {
@@ -573,26 +592,138 @@ header {
         margin: 0 auto;
     }
 
-    .box-container, .team-container, .testimonial-container {
-        grid-template-columns: 1fr; /* Una sola columna para las cajas */
+    /* Cambia grid a flex para evitar overflow y problemas de alineación */
+    .box-container,
+    .team-container,
+    .testimonial-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+        width: 100%;
     }
 
-    .team-member img {
-        max-width: 200px;
-        height: 200px;
+    .team-member,
+    .testimonial {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin-left: auto;
+        margin-left: auto;
     }
 
+    .team-member img,
     .testimonial figure img {
-        width: 100px;
+        max-width: 100px;
         height: 100px;
     }
 
-    .social-icons a {
+    .title {
         font-size: 1.5em;
-        margin: 0 8px;
     }
 
+    .box-container .box,
+    .team-member,
+    .testimonial {
+        margin: 1rem 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .content.contact p,
+    .content.contact a {
+        font-size: 1em;
+    }
     .footer p {
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+    .social-icons a {
+        font-size: 1.2em;
     }
 }
+
+/* Mejoras generales para responsividad */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Ajustes para imágenes y contenedores */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes para el header en pantallas pequeñas */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+        height: auto;
+    }
+    .head .logo img {
+        height: 120px;
+    }
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .box-container .box {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        padding: 20px 2%;
+    }
+    .footer {
+        padding: 20px 5px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+    .box-container .box,
+    .team-member,
+    .testimonial {
+        margin: 1rem 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+    .team-member img,
+    .testimonial figure img {
+        max-width: 120px;
+        height: 120px;
+    }
+    .content.contact p,
+    .content.contact a {
+        font-size: 1em;
+    }
+    .footer p {
+        font-size: 0.7em;
+    }
+    .social-icons a {
+        font-size: 1.2em;
+    }
+}
+
+
+
+
